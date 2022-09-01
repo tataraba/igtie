@@ -1,15 +1,15 @@
-<!-- <p align="center">
+<p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://github.com/tataraba/" alt="Project logo"></a>
-</p> -->
+ <img width=200px height=200px src="https://raw.githubusercontent.com/tataraba/igtie/main/app/static/images/igtie.png" alt="Project logo"></a>
+</p>
 
 <h1 align="center">I'LL GET TO IT... EVENTUALLY</h1>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/igtie/igtie.svg)](https://github.com/igtie/igtie/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/igtie/igtie.svg)](https://github.com/igtie/igtie/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/tataraba/igtie.svg)](https://github.com/tataraba/igtie/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/tataraba/igtie.svg)](https://github.com/tataraba/igtie/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
