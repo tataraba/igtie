@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ meta_description }}"/>
+  <meta name="keywords" content="Goal Tracker, Goals, Resolution, Entertainment, Books, Movies, Music, Games">
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="theme-color" content="#cccccc"/>
+  <meta property="og:site_name" content="{{ title }}"/>
+  <meta property="og:type" content="IGTIE - I'll get to it... eventually."/>
+  <meta property="og:title" content="{{ title }}"/>
+  <meta property="og:description"  content="{{ meta_description }}"/>
+  <meta property="og:url" content="http://igtie.pythonbynight.com"/>
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:site" content="@PythonByNight">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:widgets:border-color" content="hsl(168, 40%, 75%)">
+  <meta name="twitter:widgets:theme" content="dark">
+  <meta name="twitter:widgets:border-color" content="hsl(168, 40%, 75%)">
+  {# <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', path='favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', path='favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', path='favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', path='favicon/site.webmanifest') }}"> #}
+  {% block pagestyles %}
+    {% include "shared/_styles.html" %}
+  {% endblock %}
+</head>
+<body>
+
+      {% block header %}
+        {% include "shared/_header.html" %}
+      {% endblock %}
+
+      {% block content %}
+        
+      {% endblock %}
+
+   
+
+      {% block sidebar %}
+        {% include "shared/_sidebar.html" %}
+      {% endblock %}
+
+    {% block footer %}    
+        {% include "shared/_footer.html" %}
+    
+    {% endblock %}
+
+</body>
+</html>
