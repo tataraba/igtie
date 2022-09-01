@@ -32,7 +32,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Igtie is short for *I'll get to it eventually*. It's meant to provide a central hub for all those mental notes and bookmarks stored away in the back of your head. Let's face it, you already forgot the name of that show your best friend told you about last week.
+*__IGTIE__* is short for *I'll get to it eventually*. This project is meant to provide a central hub for all those mental notes and bookmarks stored away in the back of your head. Let's face it, you already forgot the name of that show your best friend told you about last week.
 
 Have a new album you want to listen to? Save it here and even give yourself a timeframe to help motivate you. Want to learn a new python library? Add it to your _Coding Playlist_ so you don't forget about it later. Anything's game! 
 
@@ -42,16 +42,16 @@ If you want to get a copy of this project up and running on your local machine, 
 
 ### Prerequisites
 
-The project requires Python 3.10 and a few dependencies. I use [PDM](https://pdm.fming.dev/latest/) as my package manager, but it is not required. However, it might make installation easier.
+The project requires Python 3.10 and a few other dependencies. I use [PDM](https://pdm.fming.dev/latest/) as my package manager, but it is not required. However, it might make installation easier.
 
-Your first step, however, is to clone project and access the local directory in your terminal.
+Your first step, however, is to clone the github project and access the local project directory in your terminal.
 ```
 cd igtie
 ```
 
 ### Installing (using pipx and PDM)
 
-Although pipx is not required, having an isolated environment for certain tools can make a big difference in your workflow. To install pipx:
+Although [pipx](https://pypa.github.io/pipx/) is also not required, having an isolated environment for certain tools can make a big difference in your workflow. To install pipx:
 
 On macOS
 ```
@@ -65,7 +65,9 @@ python -m pip install --user pipx
 # or if you have py installer
 py -m pip install --user pipx
 ```
->>Note: The pipx command now works within any directory in your terminal. It is not directly tied to the igtie project.
+>>Note: The pipx command will now work within any directory in your terminal. It is not directly tied to the `igtie` project directory.
+
+Now, any tool you install with pipx will be available to you in the terminal regardless what project you're working with.
 
 Next, install PDM with pipx:
 
@@ -84,7 +86,7 @@ This will create a virtual environment for the project and install the dependenc
 
 ### Installing (using requirements.txt)
 
-If you're unsure about using pipx and PDM as noted above, you can follow these instructions (after navigaing to the project root): 
+If you're unsure about using pipx and/or PDM as noted above, you can follow these instructions (after navigaing to the project root): 
 
 Create a virtual environment.
 
@@ -122,6 +124,8 @@ If no environment variables are found, it will look in "localhost" for an instan
 
 You can download the Community Edition of MongoDB and run it locally. Or, you can update the configuration file with URI parameters for an Atlas instance (MongoDB provides a free tier of 512 MB).
 
+If no database connection is found, the program will not run.
+
 >> Note: More info on configuration is forthcoming.
 
 ## 🎈 Usage <a name="usage"></a>
@@ -142,7 +146,7 @@ I'll be using pytest for testing. Instructions to follow.
 
 ### Coding Styles
 
-I use flake8, mypy, black, and isort.
+I use [flake8](https://flake8.pycqa.org/en/latest/), [mypy](https://mypy.readthedocs.io/en/stable/index.html), [black](https://black.readthedocs.io/en/stable/), and [isort](https://pycqa.github.io/isort/).
 
 
 <!-- ## 🚀 Deployment <a name = "deployment"></a>
