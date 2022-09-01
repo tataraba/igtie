@@ -24,9 +24,9 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
+- [Settings](#settings)
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -142,7 +142,7 @@ I'll be using pytest for testing. Instructions to follow.
 
 ### Coding Styles
 
-I will be using flake8, mypy, black, and isort
+I use flake8, mypy, black, and isort.
 
 
 <!-- ## 🚀 Deployment <a name = "deployment"></a>
