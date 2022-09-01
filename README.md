@@ -103,6 +103,7 @@ Activate the environment.
 ```
 # macOS
 source .venv/bin/activate
+
 # Windows (PowerShell)
 .venv/Scripts/activate
 ```
