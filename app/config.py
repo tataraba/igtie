@@ -4,11 +4,11 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-from pydantic import BaseModel, BaseSettings, Field
+from pydantic import AnyUrl, BaseModel, BaseSettings, Field
 
 logger = logging.getLogger(__name__)
 
-APP_ROOT = Path(__file__).parent.parent
+APP_ROOT = Path(__file__).resolve().parent
 
 
 class AppConfig(BaseModel):
@@ -79,12 +79,15 @@ class GlobalConfig(BaseSettings):
     ACCESS_TOKEN_EXPIRES_MINUTES: int | None = None
     CRYPTCONTEXT_SCHEMES: str | None = "bcrypt"
 
-    MONGO_SCHEME: str | None = None
-    MONGO_HOST: str | None = None
+    MONGO_DB_URI: AnyUrl | None = None  # Use this for testing
+
+    MONGO_SCHEME: str = "mongodb"
+    MONGO_HOST: str = "localhost"
     MONGO_PORT: str | None = None
     MONGO_USER: str | None = None
     MONGO_PASS: str | None = None
     MONGO_DB: str | None = None
+    MONGO_AUTH_DB: str | None = None
 
     @property
     def fastapi_kwargs(self) -> Dict[str, Any]:

@@ -1,11 +1,14 @@
+# TODO: Create JSON loggers for file handler
+
 import logging
 import sys
 from functools import lru_cache
 from pathlib import Path
 
-from app.core.config import get_app_settings
 from pydantic import BaseModel
 from rich.logging import RichHandler
+
+from ..config import get_app_settings
 
 logger = logging.getLogger(__name__)
 

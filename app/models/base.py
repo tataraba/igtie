@@ -7,7 +7,7 @@ from beanie import Document
 class Model(Document):
     """Base class for database models. Inherits from beanie `Document` class
     and is used as drop-in replacement. Adds `created_at` and `updated_at`
-    fields.
+    fields and other useful properties.
     """
 
     created_at: Optional[str] = pnd.now().isoformat()
@@ -15,6 +15,7 @@ class Model(Document):
 
     @property
     def class_name(self):
+        """Shortcut that returns the class name."""
         return self.__class__.__name__.lower()
 
     @classmethod

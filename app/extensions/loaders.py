@@ -2,34 +2,13 @@ from importlib import import_module
 from pathlib import Path
 from typing import Iterator
 
-import jinja_partials  # type: ignore
-from app.core.config import get_app_settings
-from fastapi.templating import Jinja2Templates
-from starlette.staticfiles import StaticFiles
+from config import get_app_settings
 
 settings = get_app_settings()
-app_settings = settings.more_settings
-ROOT = settings.APP_DIR
-
-
-def init_template() -> Jinja2Templates:
-    """Initializes Jinja2 templates."""
-    templates = Jinja2Templates(ROOT / app_settings.templates_dir)
-
-    jinja_partials.register_starlette_extensions(templates)
-
-    return templates
-
-
-def incl_static(app) -> None:
-    """Mount directory for static files."""
-    app.mount(
-        "/static", StaticFiles(directory=ROOT / app_settings.static_dir), name="static"
-    )
 
 
 def get_modules(module) -> Iterator[str]:
-    """Returns all .py modules in given file_dir
+    """Returns all .py modules in given file_dir.
 
     Args:
         module (str): Name of directory to begin recursive search
@@ -38,6 +17,11 @@ def get_modules(module) -> Iterator[str]:
         Iterator[str]: The generator contains paths to modules
         with dot notation starting at project root.
         (For example: "app.models.user")
+
+    References:
+        [Bob Waycott](
+            https://bobwaycott.com/blog/how-i-use-flask/organizing-flask-models-with-automatic-discovery/
+            )
     """
     file_dir = Path(settings.APP_DIR / module)
     idx_app_root = len(settings.APP_DIR.parts) - 1  # index of app root
@@ -61,6 +45,11 @@ def dynamic_loader(module, compare) -> list:
 
     Returns:
         list: All modules that match the `compare` function.
+
+    References:
+        [Bob Waycott](
+            https://bobwaycott.com/blog/how-i-use-flask/organizing-flask-models-with-automatic-discovery/
+            )
     """
     items = []
     for mod in get_modules(module):
