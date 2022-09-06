@@ -1,0 +1,205 @@
+{% extends "shared/_base.html" %}
+
+{% block header %}
+<div class="element-wrapper">
+<div class = "splash-header-wrapper">
+    <nav class="splash-nav-wrapper">
+        <ul>
+            <li><a href="#" class="button muted">Log In</a></li>
+            <li><a href="#" class="button attention">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="splash-main bg-color-blue">
+        <header>
+            <div class="logo">
+                <a href="/" aria-label="Check mark logo">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg width="300px" height="265px" version="1.1" viewBox="0 0 79.375 70.04" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(-18.262 -131.32)">
+                    <path d="m86.642 131.32-10.094 10.094a34.478 34.797 0 0 1 8.6127 13.377l12.476-12.476zm-1.4816 23.471-31.503 31.503-24.858-24.858 10.995-10.995 13.863 13.863 22.89-22.89a34.478 34.797 0 0 0-23.808-9.6486 34.478 34.797 0 0 0-34.478 34.797 34.478 34.797 0 0 0 34.478 34.797 34.478 34.797 0 0 0 34.478-34.797 34.478 34.797 0 0 0-2.0574-11.771z" style="stroke-width:.09184"/>
+                    </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="logo-text">
+                <h1>WRPL<span class="text-color-accent">yst</span></h1>
+                <h2>Watch. Read. Play. Listen</h2>
+            </div>
+        </header>
+        <div class="splash-summary-card">
+            <ul class="zmdi-hc-ul">
+                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Choose a category</li>
+                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Set a timeframe</li>
+                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Add your list of titles</li>
+                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Track your progress</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <main class="splash-details">
+
+        <p class="splash-tagline">
+            Give yourself permission to indulge your favorite passtime.
+        </p>
+
+
+        <form class="splash-categories" id="cat-list-form">
+            <fieldset class="category-options">
+            <legend>Put it on my list:</legend>
+
+            <input type="radio" id="books" name="wrpl-categories">
+            <label for="books">Books</label>
+
+            <input type="radio" id="movies-tv" name="wrpl-categories">
+            <label for="movies-tv">Movies/TV</label>
+
+            <input type="radio" id="music" name="wrpl-categories">
+            <label for="music">Music</label>
+
+            <input type="radio" id="games" name="wrpl-categories">
+            <label for="games">Games</label>
+            </fieldset>
+            <button class="button" form="cat-list-form">
+                    Add Titles
+            </button>
+
+            </a>
+        </form>
+
+        <p class="splash-app-description">
+            <span class="app-name">WRPL<span class="text-color-accent">yst</span></span> helps keep track of your entertaniment goals.
+        </p>
+        <!-- <p class="splash-description">
+            It's easy to get started. Set your own goals and soon you'll be delighted by the content you've been missing.
+        </p> -->
+    </main>
+</div>
+
+
+{% endblock %}
+
+{% block sidebar %}
+    <aside class="element-wrapper">
+        <ul>
+            <li><a href="#features" class="button muted">Features</a></li>
+            <li><a href="#faq" class="button muted">FAQ</a></li>
+            <li><a href="#" class="button attention">Register for Free!</a></li>
+        </ul>
+    </aside>
+
+    <section class="element-wrapper">
+        <h2 id="features" class="splash-h2">Features</h2>
+        <ul>
+            <li>Organize by Media Type</li>
+                <ul>
+                    <li>Choose an Entertainment Category</li>
+                    <li>Customize List Based on Genre, Topic, Release Date</li>
+                    <li>Set Priority</li>
+                    <li>Save Your Favorites</li>
+                </ul>
+        </ul>
+        <ul>
+            <li>Set Your Goals</li>
+                <ul>
+                    <li>Select Weekly, Monthly, Yearly Goal</li>
+                    <li>Schedule Time</li>
+                    <li>Enable/Disable Reminders</li>
+                    <li>Measure Your Timeline</li>
+                </ul>
+        </ul>
+        <ul>
+            <li>Track and Share</li>
+                <ul>
+                    <li>View Progress on Your Dashboard</li>
+                    <li>Add Notes to Your Favorite Titles </li>
+                    <li>Share With Others Your Insights</li>
+                    <li>Bask in Your Accomplishments</li>
+                </ul>
+        </ul>
+    </section>
+    <section class="element-wrapper">
+        <h2 id="faq" class="splash-h2">FAQ</h2>
+        <dl>
+            <dt>What is WRPLyst?</dt>
+            <dd>WRPLyst is a web application that helps you track the media content you've been missing.
+                Think of it as a goal-setting application without the <em>nag</em> factor. It is designed
+                to motivate you to sepend more time with the things that bring you joy!</dd>
+
+            <dt>How is it different than other goal-setting apps?</dt>
+            <dd>Other goal-setting apps are designed to encompass a large number of activities and are
+                weighed down by the broad feature-sets that sometimes don't seem very well connected.
+                WRPLyst is different by focusing specifically on a set of entertainment categories. It
+                brings you closer to books, movies, tv shows, albums, and games that you've been missing.
+                A simple interface and intuitive controls keep you motivated to catch up on (or revisit)
+                the content you crave.</dd>
+
+            <dt>How much does it cost to use?</dt>
+            <dd>WRPLyst is completely free for all users. You can register for free and start tracking
+                your goals within minutes. There are enhanced features available for a small monthly fee,
+                but that is entirely optional.</dd>
+
+            <dt>How do I use WRPLyst?</dt>
+            <dd>You can start by signing up for a free account. Once you're logged in, you can immediately
+                begin creating yoru WRPLyst. Additionally, if you fill out your profile, you may begin to
+                see suggested lists of titles to add to your lists based on your preferences. Your user data
+                is stored securely and is not shared with any third parties.</dd>
+        </dl>
+    </section>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+<footer class="element-wrapper footsie">
+    <div class="signup-email">
+        <p>Don't just put it on the shelf... put it on your list!</p>
+        <form id="footer-signup">
+            <label for="email-input" class="footer-small-label">Email address</label>
+            <input class="input" id="email-input" type="text" />
+            <button class="button">Sign Up</button>
+        </form>
+    </div>
+    <div class="site-info">
+        <div class="element-wrapper">
+            <dl class="footer-links footer-social-media">
+                <dt class="footer-small-label">Get in touch</dt>
+                <dd><a href="#" class="media-link"><i class="zmdi zmdi-twitter zmdi-hc-2x zmdi-hc-fw" role="img" aria-label="Twitter"></i></a></dd>
+                <dd><a href="#" class="media-link"><i class="zmdi zmdi-instagram zmdi-hc-2x zmdi-hc-fw" role="img" aria-label="Instagram1"></i></a></dd>
+                <dd><a href="#" class="media-link"><i class="zmdi zmdi-email zmdi-hc-2x zmdi-hc-fw" role="img" aria-label="Email"></i></a></dd>
+            </dl>
+            <dl class="footer-links">
+                <dt class="footer-small-label">Get Started</dt>
+                <dd><a href="#" class="media-link">Login</a></dd>
+                <dd><a href="#" class="media-link">Sign Up</a></dd>
+                <dd><a href="#" class="media-link">FAQ/Support</a></dd>
+                <dd><a href="#" class="media-link">How it works</a></dd>
+                <dd><a href="#" class="media-link">Pricing</a></dd>
+            </dl>
+            <dl class="footer-links">
+                <dt class="footer-small-label">Discover</dt>
+                <dd><a href="#" class="media-link">About</a></dd>
+                <dd><a href="#" class="media-link">Blog</a></dd>
+                <dd><a href="#" class="media-link">Contact</a></dd>
+            </dl>
+        </div>
+        <div class="logo-text">
+            <h3>WRPL<span class="text-color-accent">yst</span></h3>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2022 WRPLyst</p>
+    </div>
+</footer>
+
+
+
+{% endblock %}

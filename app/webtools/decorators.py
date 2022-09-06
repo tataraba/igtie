@@ -13,7 +13,6 @@ def response(*, template_file: str | None = None):
     """
     def inner(func):
 
-        # Assign template directory for FastAPI/Jinja
         template = init_template()
 
         @wraps(func)
@@ -33,10 +32,10 @@ def response(*, template_file: str | None = None):
                 Response: TemplateResponse containing Jinja context
             """
             template_response: Response | None = None
-            request_object = {
-                k: v for k, v in kwargs.items() if isinstance(v, Request)
-            }
-            context: dict = await func(*args, **kwargs) | request_object
+            request = {k: v for k, v in kwargs.items() if isinstance(v, Request)}
+            view_context = await func(*args, **kwargs)
+
+            context: dict = view_context.to_dict() | request
 
             if not template_file:
                 raise Exception(
