@@ -1,24 +1,49 @@
 from functools import wraps
 
 from app.webtools.mount import init_template
-from fastapi.responses import Response
+from starlette.requests import Request
+from starlette.responses import Response
 
 
 def response(*, template_file: str | None = None):
+    """Provide decorator for FastAPI html routes.
+
+    Args:
+        template_file (str | None, optional): Name of template file. Defaults to None.
+    """
     def inner(func):
+
+        # Assign template directory for FastAPI/Jinja
         template = init_template()
 
         @wraps(func)
         async def view_method(*args, **kwargs):
-            context: dict = await func(*args, **kwargs)
-            resp: Response | None = None
+            """Wraps the FastAPI route methods to extract the `Request`
+            object from `kwargs` and attach it to a view `context`. This is
+            then used to create the Jinja2Template response.
+
+            Raises:
+                Exception: If template file is invalid or not given, will
+                generate "Template file not found."
+                Exception: If the context type is not a valid dictionary,
+                will generate "Context of type {type(context)} is not valid.
+                Expected dict."
+
+            Returns:
+                Response: TemplateResponse containing Jinja context
+            """
+            template_response: Response | None = None
+            request_object = {
+                k: v for k, v in kwargs.items() if isinstance(v, Request)
+            }
+            context: dict = await func(*args, **kwargs) | request_object
 
             if not template_file:
                 raise Exception(
                     "Template file not found."
                 )
             if isinstance(context, dict):
-                resp = template.TemplateResponse(
+                template_response = template.TemplateResponse(
                     template_file,
                     context=context
                 )
@@ -26,6 +51,6 @@ def response(*, template_file: str | None = None):
                 raise Exception(
                     f"Context of type {type(context)} is not valid. Expected dict."
                 )
-            return resp
+            return template_response
         return view_method
     return inner
