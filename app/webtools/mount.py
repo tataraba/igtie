@@ -1,6 +1,5 @@
 from functools import lru_cache
 
-import jinja_partials
 from fastapi.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
 
@@ -15,7 +14,6 @@ ROOT = settings.APP_DIR
 def init_template() -> Jinja2Templates:
     """Initializes Jinja2 templates."""
     templates = Jinja2Templates(ROOT / app_settings.templates_dir)
-    jinja_partials.register_starlette_extensions(templates)
     return templates
 
 

@@ -32,10 +32,12 @@ def response(*, template_file: str | None = None):
                 Response: TemplateResponse containing Jinja context
             """
             template_response: Response | None = None
-            request = {k: v for k, v in kwargs.items() if isinstance(v, Request)}
+            request_context = {
+                    k: v for k, v in kwargs.items() if isinstance(v, Request)
+                }
             view_context = await func(*args, **kwargs)
 
-            context: dict = view_context.to_dict() | request
+            context: dict = view_context.to_dict() | request_context
 
             if not template_file:
                 raise Exception(

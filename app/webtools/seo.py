@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 
 
-# TODO: Shouldn't assign values here. Move logic elsewhere
+# TODO: Shouldn't assign values here (content_type, charset)
 class BaseSEOData(BaseModel):
     meta_title: str = Field(None, min_length=3, max_length=60)
     meta_description: str = Field(None, min_length=10, max_length=160)
