@@ -1,9 +1,8 @@
 from functools import wraps
 from typing import Any
 
-import jinja2_fragments
 from app.webtools.mount import init_template
-from jinja2 import Environment
+# from jinja2 import Environment
 from starlette.requests import Request
 
 
@@ -23,7 +22,7 @@ def response(
     def inner(func):
 
         template = init_template()
-        jinja_env: Environment = template.env
+        # jinja_env: Environment = template.env
 
         @wraps(func)
         async def view_method(*args, **kwargs):
@@ -60,11 +59,10 @@ def response(
             if not block_name:
                 return template.TemplateResponse(template_file, context)
 
-            return jinja2_fragments.render_block(
-                jinja_env,
+            return template.TemplateResponse(
                 template_file,
-                block_name,
-                context
+                context,
+                block_name=block_name,
             )
         return view_method
     return inner
