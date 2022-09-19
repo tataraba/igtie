@@ -1,205 +1,72 @@
 {% extends "shared/_base.html" %}
 
 {% block header %}
-<div class="element-wrapper">
-<div class = "splash-header-wrapper">
-    <nav class="splash-nav-wrapper">
-        <ul>
-            <li><a href="#" class="button muted">Log In</a></li>
-            <li><a href="#" class="button attention">Sign Up</a></li>
-        </ul>
-    </nav>
-
-    <div class="splash-main bg-color-blue">
-        <header>
-            <div class="logo">
-                <a href="/" aria-label="Check mark logo">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg width="300px" height="265px" version="1.1" viewBox="0 0 79.375 70.04" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(-18.262 -131.32)">
-                    <path d="m86.642 131.32-10.094 10.094a34.478 34.797 0 0 1 8.6127 13.377l12.476-12.476zm-1.4816 23.471-31.503 31.503-24.858-24.858 10.995-10.995 13.863 13.863 22.89-22.89a34.478 34.797 0 0 0-23.808-9.6486 34.478 34.797 0 0 0-34.478 34.797 34.478 34.797 0 0 0 34.478 34.797 34.478 34.797 0 0 0 34.478-34.797 34.478 34.797 0 0 0-2.0574-11.771z" style="stroke-width:.09184"/>
-                    </g>
-                    </svg>
-                </a>
-            </div>
-            <div class="logo-text">
-                <h1>WRPL<span class="text-color-accent">yst</span></h1>
-                <h2>Watch. Read. Play. Listen</h2>
-            </div>
-        </header>
-        <div class="splash-summary-card">
-            <ul class="zmdi-hc-ul">
-                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Choose a category</li>
-                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Set a timeframe</li>
-                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Add your list of titles</li>
-                <li><i class="zmdi-hc-li zmdi zmdi-arrow-right"></i>Track your progress</li>
-            </ul>
-        </div>
-    </div>
+{% include "shared/_header.html" %}
 {% endblock %}
 
-
 {% block content %}
-
-
-    <main class="splash-details">
-
-        <p class="splash-tagline">
-            Give yourself permission to indulge your favorite passtime.
-        </p>
-
-
-        <form class="splash-categories" id="cat-list-form">
-            <fieldset class="category-options">
-            <legend>Put it on my list:</legend>
-
-            <input type="radio" id="books" name="wrpl-categories">
-            <label for="books">Books</label>
-
-            <input type="radio" id="movies-tv" name="wrpl-categories">
-            <label for="movies-tv">Movies/TV</label>
-
-            <input type="radio" id="music" name="wrpl-categories">
-            <label for="music">Music</label>
-
-            <input type="radio" id="games" name="wrpl-categories">
-            <label for="games">Games</label>
-            </fieldset>
-            <button class="button" form="cat-list-form">
-                    Add Titles
-            </button>
-
+<main>
+    <section class="bg-stone-50 dark:bg-stone-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+            <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-stone-700 bg-stone-100 rounded-full dark:bg-stone-800 dark:text-light hover:bg-stone-200 dark:hover:bg-stone-700" role="alert">
+                <span class="text-xs bg-igtie-500 rounded-full text-light px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Igtie is coming! What's it about?</span>
+                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
             </a>
-        </form>
-
-        <p class="splash-app-description">
-            <span class="app-name">WRPL<span class="text-color-accent">yst</span></span> helps keep track of your entertaniment goals.
-        </p>
-        <!-- <p class="splash-description">
-            It's easy to get started. Set your own goals and soon you'll be delighted by the content you've been missing.
-        </p> -->
-    </main>
-</div>
-
-
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-stone-900 md:text-5xl lg:text-6xl dark:text-light">I'll get to it... eventually.</h1>
+            <p class="mb-8 text-lg font-normal text-stone-500 lg:text-xl sm:px-16 xl:px-48 dark:text-stone-400">Igtie is not a to-do list. It is not a task tracker. It's not interested in your New Year's resolution . So what is it? Mostly just a fancy way of putting things on the back burner...</p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-light rounded-lg bg-igtie-500 hover:-800 focus:ring-4 focus:ring-igtie-300 dark:focus:ring-igtie-900">
+                    Learn more
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-stone-900 rounded-lg border border-stone-300 hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 dark:text-light dark:border-stone-700 dark:hover:bg-stone-700 dark:focus:ring-stone-800">
+                    <!-- <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 -ml-1 w-5 h-5 fill-green-800"><path d="M8.707 1h12v2h-12zM1.707 0h4v4h-4zM8.707 9h12v2h-12zM8.707 17h12v2h-12zM1.707 16h4v4h-4zM2.707 13.414l4.707-4.707L6 7.293l-3.293 3.293-1.293-1.293L0 10.707l2.707 2.707z"/></svg>
+                    See Features
+                </a>
+            </div>
+            <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+                <span class="font-semibold text-stone-700 uppercase">Maybe Someday</span>
+                <div class="flex flex-wrap justify-center items-center mt-8 text-green-900 sm:justify-between">
+                    <div class="flex flex-col justify-center items-center mt-1 sm:justify-between">
+                        <a href="#" class="mb-5 lg:mb-0 hover:text-stone-800 dark:hover:text-stone-400">
+                            <svg data-name="1-Video" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-10 fill-green-800"><path d="M27 32H5a5.006 5.006 0 0 1-5-5V5a5.006 5.006 0 0 1 5-5h22a5.006 5.006 0 0 1 5 5v22a5.006 5.006 0 0 1-5 5zM5 2a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3z"/><path d="M13 20a1 1 0 0 1-1-1v-6a1 1 0 0 1 1.447-.895l6 3a1 1 0 0 1 0 1.79l-6 3A1 1 0 0 1 13 20zm1-5.382v2.764L16.764 16z"/></svg>
+                        </a>
+                        <span>watch</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center mt-1 sm:justify-between">
+                        <a href="#" class="mb-5 lg:mb-0 hover:text-stone-800 dark:hover:text-stone-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve" class="h-11 fill-green-800"><path d="M66.647 77.94 128 49.733v5.14L66.491 83.174 12.303 53.876l-.016.047a4.704 4.704 0 0 0-5.934 2.991c-1.371 3.863 3.084 5.997 3.598 6.23l.156.078 55.154 29.812L128 64.171v5.156L65.089 98.251 10.917 68.969l-.016.031a4.634 4.634 0 0 0-3.583.28 4.596 4.596 0 0 0-2.352 2.71c-1.402 3.987 3.38 6.137 3.582 6.23l.171.078 55.154 29.812L128 77.785v5.171l-64.297 30.373L6.571 82.457C3.456 81.055-1.684 76.803.543 70.479a9.208 9.208 0 0 1 4.283-5.156c-2.43-2.134-4.455-5.514-2.897-9.922a9.265 9.265 0 0 1 4.283-5.171c-2.43-2.118-4.439-5.514-2.882-9.906.763-2.321 2.43-4.252 4.657-5.389 2.056-1.028 62.35-20.264 62.35-20.264L128 40.06 66.569 66.835l-52.88-27.99c-.016 0-.031-.016-.047-.016-2.461-.794-5.078.561-5.903 3.006-1.355 3.863 3.1 5.997 3.598 6.23l.171.078L66.647 77.94z"/></svg>
+                        </a>
+                        <span>read</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center mt-1 sm:justify-between">
+                        <a href="#" class="mb-5 lg:mb-0 hover:text-stone-800 dark:hover:text-stone-400">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 90 90" xml:space="preserve" class="h-10 fill-green-800"><path d="M83.333 50v-6.667C83.333 24.928 68.415 10 50 10c-18.412 0-33.333 14.928-33.333 33.333V50C12.998 50 10 53.001 10 56.667v20c0 3.665 2.998 6.666 6.667 6.666h11.667V50h-5v-6.667C23.333 28.61 35.27 16.667 50 16.667c14.729 0 26.667 11.943 26.667 26.667V50h-5v33.333h11.666c3.666 0 6.667-3.001 6.667-6.666v-20C90 53.001 86.999 50 83.333 50zM21.667 76.667h-5v-20h5v20zm61.666 0h-5v-20h5v20z"/><path d="M66.667 63.333h-9.636l-2.044 16.361-4.545-36.361H39.583l-2.5 20h-3.75V70h9.636l2.044-16.36L49.558 90h10.859l2.5-20h3.75z"/></svg>
+                        </a>
+                        <span>listen</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center mt-1 sm:justify-between">
+                        <a href="#" class="mb-5 lg:mb-0 hover:text-stone-800 dark:hover:text-stone-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="h-10 fill-green-800"><g data-name="48-Idea and Learning"><path d="M47 48H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 .171-1H1a1 1 0 0 1-1-1v-8a3 3 0 0 1 3-3h11v2H3a1 1 0 0 0-1 1v7h5a1 1 0 0 1 0 2 1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h39v-7a1 1 0 0 0-1-1h-4a1 1 0 0 1 0-2 1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-7v-2h7a3 3 0 0 1 3 3v6a3 3 0 0 1-.171 1H45a3 3 0 0 1 3 3v8a1 1 0 0 1-1 1z"/><path d="M6 34H4v-3a1 1 0 0 1 1-1h8v2H6zM34 30h2v4h-2zM38 30h2v4h-2zM43 44H13a1 1 0 0 1-1-1v-3h2v2h28v-2h2v3a1 1 0 0 1-1 1zM8 40h2v4H8zM7 36h8v2H7zM37 36h4v2h-4zM30 29h-2v-3a1 1 0 0 1 .615-.923 12 12 0 1 0-9.23 0A1 1 0 0 1 20 26v3h-2v-2.351a14 14 0 1 1 12 0zM29 37H19a1 1 0 0 1-1-1v-4h2v3h8v-3h2v4a1 1 0 0 1-1 1z"/><path d="M16 31h16v2H16zM26 40h-4a1 1 0 0 1-1-1v-3h2v2h2v-2h2v3a1 1 0 0 1-1 1zM28 14h-8a3 3 0 1 1 3-3h-2a1 1 0 1 0-1 1h8a1 1 0 1 0-1-1h-2a3 3 0 1 1 3 3z"/><path d="M23 13h2v16h-2z"/></g></svg>
+                        </a>
+                        <span>learn</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center mt-1 sm:justify-between">
+                        <a href="#" class="mb-5 lg:mb-0 hover:text-stone-800 dark:hover:text-stone-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="35 0 430 430" class="h-11 fill-green-800"><g data-name="Game Boy"><path d="M342.784 80.267H167.787a22.71 22.71 0 0 0-22.682 22.683v306.095a22.718 22.718 0 0 0 22.682 22.687h174.997a22.717 22.717 0 0 0 22.678-22.687V102.95a22.713 22.713 0 0 0-22.678-22.683zm2.567 328.778a2.579 2.579 0 0 1-2.567 2.572H167.787a2.583 2.583 0 0 1-2.572-2.572V102.95a2.58 2.58 0 0 1 2.572-2.577h174.997a2.576 2.576 0 0 1 2.567 2.577z"/><path d="M182.244 289.603h146.082V114.008H182.244zm20.112-155.484H308.21v135.373H202.356zM225.122 320.514h-20.116v16.398h-17.767v20.11h17.767v16.403h20.116v-16.403h17.764v-20.11h-17.764v-16.398zM290.612 321.117h31v20.111h-31zM290.612 352.118h31v20.111h-31z"/></g></svg>
+                        </a>
+                        <span>play</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}
 
 {% block sidebar %}
-    <aside class="element-wrapper">
-        <ul>
-            <li><a href="#features" class="button muted">Features</a></li>
-            <li><a href="#faq" class="button muted">FAQ</a></li>
-            <li><a href="#" class="button attention">Register for Free!</a></li>
-        </ul>
-    </aside>
-
-    <section class="element-wrapper">
-        <h2 id="features" class="splash-h2">Features</h2>
-        <ul>
-            <li>Organize by Media Type</li>
-                <ul>
-                    <li>Choose an Entertainment Category</li>
-                    <li>Customize List Based on Genre, Topic, Release Date</li>
-                    <li>Set Priority</li>
-                    <li>Save Your Favorites</li>
-                </ul>
-        </ul>
-        <ul>
-            <li>Set Your Goals</li>
-                <ul>
-                    <li>Select Weekly, Monthly, Yearly Goal</li>
-                    <li>Schedule Time</li>
-                    <li>Enable/Disable Reminders</li>
-                    <li>Measure Your Timeline</li>
-                </ul>
-        </ul>
-        <ul>
-            <li>Track and Share</li>
-                <ul>
-                    <li>View Progress on Your Dashboard</li>
-                    <li>Add Notes to Your Favorite Titles </li>
-                    <li>Share With Others Your Insights</li>
-                    <li>Bask in Your Accomplishments</li>
-                </ul>
-        </ul>
-    </section>
-    <section class="element-wrapper">
-        <h2 id="faq" class="splash-h2">FAQ</h2>
-        <dl>
-            <dt>What is WRPLyst?</dt>
-            <dd>WRPLyst is a web application that helps you track the media content you've been missing.
-                Think of it as a goal-setting application without the <em>nag</em> factor. It is designed
-                to motivate you to sepend more time with the things that bring you joy!</dd>
-
-            <dt>How is it different than other goal-setting apps?</dt>
-            <dd>Other goal-setting apps are designed to encompass a large number of activities and are
-                weighed down by the broad feature-sets that sometimes don't seem very well connected.
-                WRPLyst is different by focusing specifically on a set of entertainment categories. It
-                brings you closer to books, movies, tv shows, albums, and games that you've been missing.
-                A simple interface and intuitive controls keep you motivated to catch up on (or revisit)
-                the content you crave.</dd>
-
-            <dt>How much does it cost to use?</dt>
-            <dd>WRPLyst is completely free for all users. You can register for free and start tracking
-                your goals within minutes. There are enhanced features available for a small monthly fee,
-                but that is entirely optional.</dd>
-
-            <dt>How do I use WRPLyst?</dt>
-            <dd>You can start by signing up for a free account. Once you're logged in, you can immediately
-                begin creating yoru WRPLyst. Additionally, if you fill out your profile, you may begin to
-                see suggested lists of titles to add to your lists based on your preferences. Your user data
-                is stored securely and is not shared with any third parties.</dd>
-        </dl>
-    </section>
-
-
-</div>
-
-
 {% endblock %}
 
 {% block footer %}
-<footer class="element-wrapper footsie">
-    <div class="signup-email">
-        <p>Don't just put it on the shelf... put it on your list!</p>
-        <form id="footer-signup">
-            <label for="email-input" class="footer-small-label">Email address</label>
-            <input class="input" id="email-input" type="text" />
-            <button class="button">Sign Up</button>
-        </form>
-    </div>
-    <div class="site-info">
-        <div class="element-wrapper">
-            <dl class="footer-links footer-social-media">
-                <dt class="footer-small-label">Get in touch</dt>
-                <dd><a href="#" class="media-link"><i class="zmdi zmdi-twitter zmdi-hc-2x zmdi-hc-fw" role="img" aria-label="Twitter"></i></a></dd>
-                <dd><a href="#" class="media-link"><i class="zmdi zmdi-instagram zmdi-hc-2x zmdi-hc-fw" role="img" aria-label="Instagram1"></i></a></dd>
-                <dd><a href="#" class="media-link"><i class="zmdi zmdi-email zmdi-hc-2x zmdi-hc-fw" role="img" aria-label="Email"></i></a></dd>
-            </dl>
-            <dl class="footer-links">
-                <dt class="footer-small-label">Get Started</dt>
-                <dd><a href="#" class="media-link">Login</a></dd>
-                <dd><a href="#" class="media-link">Sign Up</a></dd>
-                <dd><a href="#" class="media-link">FAQ/Support</a></dd>
-                <dd><a href="#" class="media-link">How it works</a></dd>
-                <dd><a href="#" class="media-link">Pricing</a></dd>
-            </dl>
-            <dl class="footer-links">
-                <dt class="footer-small-label">Discover</dt>
-                <dd><a href="#" class="media-link">About</a></dd>
-                <dd><a href="#" class="media-link">Blog</a></dd>
-                <dd><a href="#" class="media-link">Contact</a></dd>
-            </dl>
-        </div>
-        <div class="logo-text">
-            <h3>WRPL<span class="text-color-accent">yst</span></h3>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2022 WRPLyst</p>
-    </div>
-</footer>
-
-
-
 {% endblock %}
