@@ -44,6 +44,16 @@ module.exports = {
         '900': '#2d5e5d'
       }
     },
+    extend: {
+      fontFamily: {
+        'kano': ['Kano', 'sans-serif'],
+        'alcu': ['Alcubierre', 'sans-serif'],
+        'muller': ['Muller', 'sans-serif'],
+      },
+      screens: {
+        'md': '800px',
+      },
+    },
   },
   plugins: [],
 }

@@ -1,3 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Kano';
+    src: url(../fonts/Kano.otf) format('opentype');
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kano';
+    src: url(../fonts/kano-webfont.woff) format('woff');
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alcubierre';
+    src: url(../fonts/Alcubierre.otf) format('opentype');
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-RegularItalic.ttf) format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-Thin.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-Regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-RegularItalic.woff) format('woff');
+    font-style: italic;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-Bold.woff) format('woff');
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url(../fonts/Muller-Trial-Thin.woff) format('woff');
+    font-style: normal;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+}

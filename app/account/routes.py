@@ -11,3 +11,8 @@ user_router = APIRouter()
 async def get_home(request: Request, x="another thing"):
     context = DefaultView()
     return context
+
+@user_router.get("/home")
+@response(template_file="home.html")
+async def get_user_home(request: Request):
+    ...

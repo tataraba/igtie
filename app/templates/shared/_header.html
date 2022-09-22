@@ -1,34 +1,39 @@
 <nav class="bg-green-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
       <div class="flex h-16 items-center justify-between">
-        <div class="flex items-center">
-          <div class="flex-shrink-0">
-            <!-- <img class="h-10 w-10" src="{{ url_for('static', path='images/igtie.png') }}" alt="Your Company"> -->
+        <div class="flex-shrink-0 justify-self-start">
+          <div class="relative ml-7">
+          <!-- <img class="h-10 w-10" src="{{ url_for('static', path='images/igtie.png') }}" alt="Your Company"> -->
             <?xml version="1.0" encoding="UTF-8"?>
             <svg width="45px" height="39.75px" version="1.1" viewBox="0 0 79.375 70.04" xmlns="http://www.w3.org/2000/svg" class="fill-igtie-500">
             <g transform="translate(-18.262 -131.32)">
             <path d="m86.642 131.32-10.094 10.094a34.478 34.797 0 0 1 8.6127 13.377l12.476-12.476zm-1.4816 23.471-31.503 31.503-24.858-24.858 10.995-10.995 13.863 13.863 22.89-22.89a34.478 34.797 0 0 0-23.808-9.6486 34.478 34.797 0 0 0-34.478 34.797 34.478 34.797 0 0 0 34.478 34.797 34.478 34.797 0 0 0 34.478-34.797 34.478 34.797 0 0 0-2.0574-11.771z" style="stroke-width:.09184"/>
             </g>
             </svg>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4">
-              <!-- Current: "bg-stone-900 text-light", Default: "text-stone-200 hover:bg-stone-700 hover:text-light" -->
-              <a href="#" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Someday</a>
-
-              <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Favorites</a>
-
-              <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Profile</a>
-
-              <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">History</a>
-
-              <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Search</a>
-            </div>
+            <span class="text-5xl font-muller uppercase tracking-widest text-brand absolute -left-8 top-0">S<span class="invisible">o</span>meday</span>
           </div>
         </div>
+        <div class="flex h-14 justify-end items-center">
+          <div class="flex items-center">
+
+            <div class="hidden md:block">
+              <div class="mr-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-stone-900 text-light", Default: "text-stone-200 hover:bg-stone-700 hover:text-light" -->
+                <a href="#" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">About</a>
+
+                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Features</a>
+
+                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Pricing</a>
+
+                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Blog</a>
+
+                <!-- <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Search</a> -->
+              </div>
+            </div>
+          </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
-            <button type="button" class="rounded-full bg-igtie-500 p-1 text-stone-300 hover:text-light focus:outline-none focus:ring-2 focus:ring-igtie-300 focus:ring-offset-2 focus:ring-offset-igtie-800">
+            <button type="button" class="rounded-full bg-brand p-1 text-stone-300 hover:text-light focus:outline-none focus:ring-2 focus:ring-igtie-300 focus:ring-offset-2 focus:ring-offset-igtie-800">
               <span class="sr-only">View notifications</span>
               <!-- Heroicon name: outline/bell -->
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -89,22 +94,22 @@
             </svg>
           </button>
         </div>
+        </div>
       </div>
+
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
         <!-- Current: "bg-stone-900 text-light", Default: "text-stone-200 hover:bg-stone-700 hover:text-light" -->
-        <a href="#" class="bg-stone-900 text-light block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+        <a href="#" class="bg-stone-900 text-light block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About</a>
 
-        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Team</a>
+        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Features</a>
 
-        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
 
-        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-
-        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Blog</a>
       </div>
       <div class="border-t border-stone-700 pt-4 pb-3">
         <div class="flex items-center px-5">
@@ -134,8 +139,8 @@
     </div>
   </nav>
 
-  <header class="bg-igtie-500 shadow">
-    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold uppercase tracking-tight text-stone-200">Someday</h1>
+  <!-- <header class="bg-igtie-500 shadow">
+    <div class="mx-auto max-w-7xl py-4 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold uppercase text-stone-400 font-kano tracking-wider">Someday</h1>
     </div>
-  </header>
+  </header> -->
