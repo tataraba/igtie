@@ -6,6 +6,7 @@
 
 {% block content %}
 <main>
+    {% block splash %}
     <section class="bg-stone-50 dark:bg-stone-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-stone-700 bg-stone-100 rounded-full dark:bg-stone-800 dark:text-light hover:bg-stone-200 dark:hover:bg-stone-700" role="alert">
@@ -62,6 +63,284 @@
             </div>
         </div>
     </section>
+    {% endblock %}
+    {% block about %}
+    <!-- About Section -->
+    <section class="bg-igtie-800 text-green-500 lg:px-48 md:px-12 px-4 py-14 flex flex-col items-center">
+        <div>
+          <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8">Lists for another day</h2>
+        </div>
+        <div class="flex flex-col md:flex-row">
+          <div class="flex-1 mx-8 flex flex-col items-center my-4">
+            <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
+              1
+            </div>
+            <h3 class="font-muller tracking-wider text-xl mb-2 text-center uppercase">No Time?</h3>
+            <p class="text-center font-kano tracking-wide">
+              <span class="font-muller uppercase text-green-800">Someday</span> is a repository for all those things you want
+              to get to, eventually, but you just can't commit to right now.
+            </p>
+          </div>
+          <div class="flex-1 mx-8 flex flex-col items-center my-4">
+            <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
+              2
+            </div>
+            <h3 class="font-muller tracking-wider text-xl mb-2 text-center uppercase">No Rush!</h3>
+            <p class="text-center font-kano">
+              It is not a tracking app, and will not make you feel guilty for not accomplishing certain goals under some arbitrary time frame.
+            </p>
+          </div>
+          <div class="flex-1 mx-8 flex flex-col items-center my-4">
+            <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
+              3
+            </div>
+            <h3 class="font-muller tracking-wider text-xl mb-2 text-center uppercase">Some day</h3>
+            <p class="text-center font-kano">
+              Instead, it will capture your interests from a wide range of mediums all in one place, without
+              the hassle of setting time frames or schedules.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section -->
+      <section class="lg:px-48 md:px-12 px-4 py-14 flex flex-col items-center bg-stone-50">
+        <div>
+          <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8">Features</h2>
+        </div>
+        <div class="md:grid md:grid-cols-2 md:grid-rows-2">
+
+          <div class="flex items-start font-kano my-6 mr-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <div>
+              <h3 class="text-2xl font-muller tracking-wide uppercase">Group by type</h3>
+              <p>
+                <span class="uppercase text-green-700">Someday</span> groups lists by type. This will help you choose what to reach for when
+                the proverbial rainy day comes. These are a few of the categories with examples of what kinds of items they might contain.
+              </p>
+              <div class="flex justify-left mt-2">
+                <ul class="text-green-800">
+                    <li class="px-6 py-2 border-b border-stone-200 w-full">
+                        <ul>
+                            <li class="text-igtie-500 font-bold uppercase">Watch</li>
+                            <li class="text-xs uppercase tracking-wider">Movies, TV Shows, Documentaries, Web Videos, etc...</li>
+                        </ul>
+                    </li>
+                    <li class="px-6 py-2 border-b border-stone-200 w-full">
+                        <ul>
+                            <li class="text-igtie-500 font-bold uppercase">Read</li>
+                            <li class="text-xs uppercase tracking-wider">Book, Article, Magazine, Blog Post, Email</li>
+                        </ul>
+                    </li>
+                    <li class="px-6 py-2 border-b border-stone-200 w-full">
+                        <ul>
+                            <li class="text-igtie-500 font-bold uppercase">Listen</li>
+                            <li class="text-xs uppercase tracking-wider">Song, Album, Artist, Podcast, Talk</li>
+                        </ul>
+                    </li>
+                    <li class="px-6 py-2 border-b border-stone-200 w-full">
+                        <ul>
+                            <li class="text-igtie-500 font-bold uppercase">Learn</li>
+                            <li class="text-xs uppercase tracking-wider">Subject, Skill, Sport, Language</li>
+                        </ul>
+                    </li>
+                    <li class="px-6 py-2 border-b border-stone-200 w-full">
+                        <ul>
+                            <li class="text-igtie-500 font-bold uppercase">Play</li>
+                            <li class="text-xs uppercase tracking-wide">Vide Game, Board Game, Sport, Squid Game?</li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="flex items-start font-kano my-6 mr-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <div>
+              <h3 class="text-2xl font-muller tracking-wide uppercase">Details</h3>
+              <p>
+                <span class="uppercase text-green-700">Someday</span> groups lists by type. This will help you choose what to reach for when
+                the proverbial rainy day comes. These are a few of the categories with examples of what kinds of items they might contain.
+              </p>
+              <p class="mt-4">
+                Depending on the category, <span class="uppercase text-green-700">Someday</span> will try to provide a few details about the item
+                you may wish to add.
+              </p>
+              <!-- <p class="mt-4">
+                For example, let's say there's a new album by <em class="italic">Awesome Generic Band</em> that you want to store in your
+                listening category. <span class="uppercase text-green-700">Someday</span> will gather basic information about <em class="italic">
+                Generic Album Name - Greatest Hits</em> and populate it for you.
+              </p> -->
+              <!-- <p class="mt-4">
+                You can then edit certain fields to better describe your saved item. You may, for instance, change the album genre from <em class="italic">
+                Easy Listening</em> to something like <em class="italic">ASMR</em>.
+              </p> -->
+          </div>
+          </div>
+          <div class="flex items-start font-kano my-6 mr-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <div>
+              <h3 class="text-2xl font-muller tracking-wide uppercase">Add Notes</h3>
+              <p>
+                <span class="uppercase text-green-700">Someday</span> groups lists by type. This will help you choose what to reach for when
+                the proverbial rainy day comes. These are a few of the categories with examples of what kinds of items they might contain.
+              </p>
+          </div>
+         </div>
+         <div class="flex items-start font-kano my-6 mr-10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <div>
+              <h3 class="text-2xl font-muller tracking-wide uppercase">Jackpot</h3>
+              <p>
+                <span class="uppercase text-green-700">Someday</span> groups lists by type. This will help you choose what to reach for when
+                the proverbial rainy day comes. These are a few of the categories with examples of what kinds of items they might contain.
+              </p>
+          </div>
+         </div>
+      </section>
+
+      <!-- Pricing -->
+  <section class="px-48 md:px-12 px-4 py-14 flex flex-col items-center bg-stone-50 py-0">
+    <div>
+      <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8">Pricing</h2>
+    </div>
+    <div class="flex w-full flex-col md:flex-row">
+
+      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-stone-50 rounded-lg py-5 px-8 my-8 md:top-24'>
+        <h3 class="font-muller uppercase text-igtie-500 text-2xl mb-4">
+          MONTHLY
+        </h3>
+        <div class="font-kano font-bold text-2xl mb-4">
+          $3
+          <span class="font-normal text-base"> / month</span>
+        </div>
+
+        <div class="flex">
+          <p>Eight Categories</p>
+        </div>
+        <div class="flex">
+          <p>Unlimited items per category</p>
+        </div>
+        <div class="flex">
+          <p>Share list items on social media</p>
+        </div>
+        <div class="flex">
+          <p>Personalize/customize lists</p>
+        </div>
+
+        <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
+          Choose plan
+        </button>
+      </div>
+
+      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-stone-50 rounded-lg py-5 px-8 my-8 md:top-12'>
+        <h3 class="font-muller uppercase text-igtie-500 text-2xl mb-4">
+          Free
+        </h3>
+        <div class="font-kano font-bold text-2xl mb-4">
+          $0
+          <span class="font-normal text-base"> / month</span>
+        </div>
+
+        <div class="flex">
+          <p>Five categories</p>
+        </div>
+        <div class="flex">
+          <p>Save 50 items per category</p>
+        </div>
+        <div class="flex">
+          <p>Share list items with other app users</p>
+        </div>
+
+        <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
+          Choose plan
+        </button>
+      </div>
+
+      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-stone-50 rounded-lg py-5 px-8 my-8 md:top-24'>
+        <h3 class="font-muller uppercase text-igtie-500 text-2xl mb-4">
+          Yearly
+        </h3>
+        <div class="font-kano font-bold text-2xl mb-4">
+          $25
+          <span class="font-normal text-base"> / year</span>
+        </div>
+
+        <div class="flex">
+            <p>Eight Categories</p>
+          </div>
+          <div class="flex">
+            <p>Unlimited items per category</p>
+          </div>
+          <div class="flex">
+            <p>Share list items on social media</p>
+          </div>
+          <div class="flex">
+            <p>Personalize/customize lists</p>
+          </div>
+          <div class="flex">
+            <p>See new features first</p>
+          </div>
+
+        <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
+          Choose plan
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ  -->
+  <section class="lg:px-48 md:px-12 px-4 py-14 flex flex-col items-start pt-8 md:pt-36 bg-igtie-800 text-stone-300 font-kano text-lg">
+    <div>
+        <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8 text-green-500">FAQ</h2>
+    </div>
+
+    <div class="w-full py-4">
+      <div class="flex justify-between items-center">
+        <div question class="font-montserrat font-medium mr-auto">
+          Wait, is this site for real?
+        </div>
+        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+      </div>
+      <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
+        You can download it on Gumroad.com
+      </div>
+    </div>
+    <hr class="w-full bg-light" />
+
+    <div toggleElement class="w-full py-4">
+      <div class="flex justify-between items-center">
+        <div question class="font-montserrat font-medium mr-auto">
+          Well, when will it be available to use?
+        </div>
+        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+      </div>
+      <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
+        Can I get involved?
+      </div>
+    </div>
+    <hr class="w-full bg-light" />
+
+    <div toggleElement class="w-full py-4">
+      <div class="flex justify-between items-center">
+        <div question class="font-montserrat font-medium mr-auto">
+          Am I awesome?
+        </div>
+        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+      </div>
+      <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
+        Yes! No doubt about it.
+      </div>
+    </div>
+    <hr class="w-full bg-light" />
+
+  </section>
+
+
+    {% endblock %}
 </main>
 {% endblock %}
 
