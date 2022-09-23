@@ -1,14 +1,174 @@
 {% extends "shared/_base.html" %}
 
 {% block header %}
-{% include "shared/_header.html" %}
+<nav class="bg-green-800 sticky top-0 z-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-8 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex-shrink-0 justify-self-start">
+          <a href="/">
+          <div class="relative ml-7">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="45px" height="39.75px" version="1.1" viewBox="0 0 79.375 70.04" xmlns="http://www.w3.org/2000/svg" class="fill-igtie-500">
+            <g transform="translate(-18.262 -131.32)">
+            <path d="m86.642 131.32-10.094 10.094a34.478 34.797 0 0 1 8.6127 13.377l12.476-12.476zm-1.4816 23.471-31.503 31.503-24.858-24.858 10.995-10.995 13.863 13.863 22.89-22.89a34.478 34.797 0 0 0-23.808-9.6486 34.478 34.797 0 0 0-34.478 34.797 34.478 34.797 0 0 0 34.478 34.797 34.478 34.797 0 0 0 34.478-34.797 34.478 34.797 0 0 0-2.0574-11.771z" style="stroke-width:.09184"/>
+            </g>
+            </svg>
+            <span class="text-5xl font-muller uppercase tracking-widest text-brand absolute -left-8 top-0">S<span class="invisible">o</span>me<span class="text-green-700">day</span></span>
+          </div>
+          </a>
+        </div>
+        <div class="flex h-14 justify-end items-center">
+          <div class="flex items-center">
+
+            <div class="hidden md:block">
+
+              <div class="mr-10 flex items-baseline space-x-4" hx-target="this">
+                <!-- Current: "bg-stone-900 text-light", Default: "text-stone-200 hover:bg-stone-700 hover:text-light" -->
+                {% block nav_menu %}
+                {% if nav_select == "#about" %}
+                <a class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page"
+                        href="/#about">About</a>
+                {% endif %}
+                <a class="text-stone-100 hover:bg-green-700 transition-all hover:text-light px-3 py-1 rounded-md text-base font-medium"
+                    href="/#about"
+                    hx-get="/about"
+                    hx-swap="/">About</a>
+
+                {% if nav_select == "#features" %}
+                <a href="#features" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Features</a>
+                {% endif %}
+                <a href="#features" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Features</a>
+
+                {% if nav_select == "#pricing" %}
+                <a href="#pricing" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Pricing</a>
+                {% endif %}
+                <a href="#pricing" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Pricing</a>
+
+                {% if nav_select == "#about" %}
+                <a href="#" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Blog</a>
+                {% endif %}
+                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Blog</a>
+
+                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Start Free</a>
+                {% endblock %}
+              </div>
+
+            </div>
+          </div>
+        <div class="hidden md:block">
+          <div class="ml-4 flex items-center md:ml-6">
+            <button type="button" class="rounded-full bg-brand p-1 text-stone-300 hover:text-light focus:outline-none focus:ring-2 focus:ring-igtie-300 focus:ring-offset-2 focus:ring-offset-igtie-800">
+              <span class="sr-only">View notifications</span>
+              <!-- Heroicon name: outline/bell -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+              </svg>
+            </button>
+
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <div>
+                <button type="button" class="flex max-w-xs items-center rounded-full bg-igtie-400 text-sm focus:outline-none focus:ring-2 focus:ring-igtie-300 focus:ring-offset-2 focus:ring-offset-igtie-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <span class="sr-only">Open user menu</span>
+                  <!-- <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="h-8 w-8"><path d="M8 0a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 15a7 7 0 0 1-5.19-2.32 2.71 2.71 0 0 1 1.7-1 13.11 13.11 0 0 0 1.29-.28 2.32 2.32 0 0 0 .94-.34 1.17 1.17 0 0 0-.27-.7 3.61 3.61 0 0 1-1.32-2.87A3.18 3.18 0 0 1 8 4.07a3.18 3.18 0 0 1 2.86 3.42 3.6 3.6 0 0 1-1.32 2.88 1.13 1.13 0 0 0-.27.69 2.68 2.68 0 0 0 .93.31 10.81 10.81 0 0 0 1.28.23 2.63 2.63 0 0 1 1.78 1A7 7 0 0 1 8 15z"/></svg>
+                </button>
+              </div>
+
+              <!--
+                Dropdown menu, show/hide based on menu state.
+
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+              <!-- <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-igtie-100 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"> -->
+                <!-- Active: "bg-stone-100", Not Active: "" -->
+                <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+
+                <a href="#" class="block px-4 py-2 text-sm text-stone-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+
+                <a href="#" class="block px-4 py-2 text-sm text-stone-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" class="inline-flex items-center justify-center rounded-md bg-stone-800 p-2 text-stone-400 hover:bg-stone-700 hover:text-light focus:outline-none focus:ring-2 focus:ring-igtie-300 focus:ring-offset-2 focus:ring-offset-stone-800" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Heroicon name: outline/bars-3
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Heroicon name: outline/x-mark
+
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+        <!-- Current: "bg-stone-900 text-light", Default: "text-stone-200 hover:bg-stone-700 hover:text-light" -->
+        <a href="#" class="bg-stone-900 text-light block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About</a>
+
+        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Features</a>
+
+        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+
+        <a href="#" class="text-stone-200 hover:bg-stone-700 hover:text-light block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+      </div>
+      <!-- <div class="border-t border-stone-700 pt-4 pb-3">
+        <div class="flex items-center px-5">
+          <div class="flex-shrink-0">
+            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          </div>
+          <div class="ml-3">
+            <div class="text-base font-medium leading-none text-light">Tom Cook</div>
+            <div class="text-sm font-medium leading-none text-stone-400">tom@example.com</div>
+          </div>
+          <button type="button" class="ml-auto flex-shrink-0 rounded-full bg-stone-800 p-1 text-stone-400 hover:text-light focus:outline-none focus:ring-2 focus:ring-igtie-300 focus:ring-offset-2 focus:ring-offset-stone-800">
+            <span class="sr-only">View notifications</span> -->
+            <!-- Heroicon name: outline/bell -->
+            <!-- <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-3 space-y-1 px-2">
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-stone-400 hover:bg-stone-700 hover:text-light">Your Profile</a>
+
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-stone-400 hover:bg-stone-700 hover:text-light">Settings</a>
+
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-stone-400 hover:bg-stone-700 hover:text-light">Sign out</a>
+        </div>
+      </div>
+    </div> -->
+  </nav>
 {% endblock %}
 
 {% block content %}
 <main>
     {% block splash %}
     <section class="bg-stone-50 dark:bg-stone-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-40 lg:px-12">
             <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-stone-700 bg-stone-100 rounded-full dark:bg-stone-800 dark:text-light hover:bg-stone-200 dark:hover:bg-stone-700" role="alert">
                 <span class="text-xs bg-igtie-500 rounded-full text-light px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium"><span class="font-muller uppercase">Someday</span> launching... someday. Find out more.</span>
                 <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
@@ -66,7 +226,7 @@
     {% endblock %}
     {% block about %}
     <!-- About Section -->
-    <section class="bg-igtie-800 text-green-500 lg:px-48 md:px-12 px-4 py-14 flex flex-col items-center">
+    <section class="bg-igtie-800 text-green-500 lg:px-48 md:px-12 px-4 py-20 flex flex-col items-center" id="about">
         <div>
           <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8">Lists for another day</h2>
         </div>
@@ -78,7 +238,7 @@
             <h3 class="font-muller tracking-wider text-xl mb-2 text-center uppercase">No Time?</h3>
             <p class="text-center font-kano tracking-wide">
               <span class="font-muller uppercase text-green-800">Someday</span> is a repository for all those things you want
-              to get to, eventually, but you just can't commit to right now.
+              to get to, eventually, but you just cannot quite commit to right now.
             </p>
           </div>
           <div class="flex-1 mx-8 flex flex-col items-center my-4">
@@ -103,7 +263,7 @@
         </div>
       </section>
       <!-- Features Section -->
-      <section class="lg:px-48 md:px-12 px-4 py-14 flex flex-col items-center bg-stone-50">
+      <section class="lg:px-48 md:px-12 px-4 pt-20 flex flex-col items-center bg-stone-50" id="features">
         <div>
           <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8">Features</h2>
         </div>
@@ -202,13 +362,13 @@
       </section>
 
       <!-- Pricing -->
-  <section class="px-48 md:px-12 px-4 py-14 flex flex-col items-center bg-stone-50 py-0">
+  <section class="lg:px-48 md:px-12 pt-20 px-4 flex flex-col items-center bg-stone-50" id="pricing">
     <div>
-      <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8">Pricing</h2>
+      <h2 class="font-muller font-thin tracking-wider uppercase text-3xl px-16">Pricing</h2>
     </div>
     <div class="flex w-full flex-col md:flex-row">
 
-      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-stone-50 rounded-lg py-5 px-8 my-8 md:top-24'>
+      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-igtie-100 rounded-lg py-5 px-8 my-8 md:top-24'>
         <h3 class="font-muller uppercase text-igtie-500 text-2xl mb-4">
           MONTHLY
         </h3>
@@ -230,9 +390,9 @@
           <p>Personalize/customize lists</p>
         </div>
 
-        <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-          Choose plan
-        </button>
+        <button class=" border border-solid border-igtie-500 rounded-xl font-kano uppercase text-sm py-3 mt-4 bg-igtie-300 hover:bg-igtie-200 transition-all">
+            Choose plan
+          </button>
       </div>
 
       <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-stone-50 rounded-lg py-5 px-8 my-8 md:top-12'>
@@ -253,13 +413,16 @@
         <div class="flex">
           <p>Share list items with other app users</p>
         </div>
+        <div class="flex">
+            <p>Always free!</p>
+          </div>
 
-        <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
+        <button class=" border border-solid border-green-800 rounded-xl font-kano uppercase text-sm py-3 mt-4 bg-green-500 hover:bg-green-400 transition-all">
           Choose plan
         </button>
       </div>
 
-      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-stone-50 rounded-lg py-5 px-8 my-8 md:top-24'>
+      <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-igtie-100 rounded-lg py-5 px-8 my-8 md:top-24'>
         <h3 class="font-muller uppercase text-igtie-500 text-2xl mb-4">
           Yearly
         </h3>
@@ -284,16 +447,16 @@
             <p>See new features first</p>
           </div>
 
-        <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-          Choose plan
-        </button>
+          <button class=" border border-solid border-igtie-500 rounded-xl font-kano uppercase text-sm py-3 mt-4 bg-igtie-300 hover:bg-igtie-200 transition-all">
+            Choose plan
+          </button>
       </div>
 
     </div>
   </section>
 
   <!-- FAQ  -->
-  <section class="lg:px-48 md:px-12 px-4 py-14 flex flex-col items-start pt-8 md:pt-36 bg-igtie-800 text-stone-300 font-kano text-lg">
+  <section class="lg:px-48 md:px-12 px-4 pb-20 flex flex-col items-start pt-8 md:pt-36 bg-igtie-800 text-stone-300 font-kano text-lg">
     <div>
         <h2 class="font-muller font-thin tracking-wider uppercase text-3xl pb-8 px-16 mb-8 text-green-500">FAQ</h2>
     </div>
@@ -303,7 +466,7 @@
         <div question class="font-montserrat font-medium mr-auto">
           Wait, is this site for real?
         </div>
-        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+        <img src="{{ url_for('static', path='images/logos/CaretRight.svg')}}" alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
         You can download it on Gumroad.com
@@ -316,7 +479,7 @@
         <div question class="font-montserrat font-medium mr-auto">
           Well, when will it be available to use?
         </div>
-        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+        <img src="{{ url_for('static', path='images/logos/CaretRight.svg')}}" alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
         Can I get involved?
@@ -327,9 +490,9 @@
     <div toggleElement class="w-full py-4">
       <div class="flex justify-between items-center">
         <div question class="font-montserrat font-medium mr-auto">
-          Am I awesome?
+          Can I get involved?
         </div>
-        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+        <img src="{{ url_for('static', path='images/logos/CaretRight.svg')}}" alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
         Yes! No doubt about it.
@@ -338,7 +501,35 @@
     <hr class="w-full bg-light" />
 
   </section>
-
+  <!-- Footer -->
+  <section class="bg-igtie-800 lg:px-48 md:px-12 px-4 py-14 flex flex-col items-center">
+    <div class="mb-4">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="45px" height="39.75px" version="1.1" viewBox="0 0 79.375 70.04" xmlns="http://www.w3.org/2000/svg" class="fill-green-500">
+        <g transform="translate(-18.262 -131.32)">
+        <path d="m86.642 131.32-10.094 10.094a34.478 34.797 0 0 1 8.6127 13.377l12.476-12.476zm-1.4816 23.471-31.503 31.503-24.858-24.858 10.995-10.995 13.863 13.863 22.89-22.89a34.478 34.797 0 0 0-23.808-9.6486 34.478 34.797 0 0 0-34.478 34.797 34.478 34.797 0 0 0 34.478 34.797 34.478 34.797 0 0 0 34.478-34.797 34.478 34.797 0 0 0-2.0574-11.771z" style="stroke-width:.09184"/>
+        </g>
+        </svg>
+    </div>
+    <div class="flex mb-8">
+      <a href="#">
+        <img src="{{ url_for('static', path='images/logos/Facebook.svg')}}" alt="Facebook logo" class="mx-4" />
+      </a>
+      <a href="#">
+        <img src="{{ url_for('static', path='images/logos/Youtube.svg')}}" alt="Youtube logo" class="mx-4" />
+      </a>
+      <a href="#">
+        <img src="{{ url_for('static', path='images/logos/Instagram.svg')}}" alt="Instagram logo" class="mx-4" />
+      </a>
+      <a href="#">
+        <img src="{{ url_for('static', path='images/logos/Twitter.svg')}}" alt="Twitter logo" class="mx-4" />
+      </a>
+    </div>
+    <div class="text-stone-400 font-montserrat text-sm">
+      © 2022 SOMEDAY app >> All rights reserved
+    </div>
+  </section>
+</body>
 
     {% endblock %}
 </main>
