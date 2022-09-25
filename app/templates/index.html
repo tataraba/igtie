@@ -24,33 +24,38 @@
 
               <div class="mr-10 flex items-baseline space-x-4" hx-target="this">
                 <!-- Current: "bg-stone-900 text-light", Default: "text-stone-200 hover:bg-stone-700 hover:text-light" -->
-                {% block nav_menu %}
-                {% if nav_select == "#about" %}
+                {% block nav_menu -%}
+                {% if nav_select == "about" %}
                 <a class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page"
                         href="/#about">About</a>
+                {% else %}
+                <a class="text-stone-100 hover:bg-green-700 transition-all hover:text-light px-3 py-1 rounded-md text-base font-medium cursor-pointer"
+                    href="#about"
+                    hx-get="/about">About</a>
                 {% endif %}
-                <a class="text-stone-100 hover:bg-green-700 transition-all hover:text-light px-3 py-1 rounded-md text-base font-medium"
-                    href="/#about"
-                    hx-get="/about"
-                    hx-swap="/">About</a>
-
-                {% if nav_select == "#features" %}
+                {% if nav_select == "features" %}
                 <a href="#features" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Features</a>
+                {% else %}
+                <a class="text-stone-100 hover:bg-green-700 transition-all hover:text-light px-3 py-1 rounded-md text-base font-medium cursor-poiter"
+                    href="#features"
+                    hx-get="/features">Features</a>
                 {% endif %}
-                <a href="#features" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Features</a>
-
-                {% if nav_select == "#pricing" %}
+                {% if nav_select == "pricing" %}
                 <a href="#pricing" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Pricing</a>
+                {% else %}
+                <a class="text-stone-100 hover:bg-green-700 transition-all hover:text-light px-3 py-1 rounded-md text-base font-medium cursor-poiter"
+                    href="#pricing"
+                    hx-get="/pricing">Pricing</a>
                 {% endif %}
-                <a href="#pricing" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Pricing</a>
-
-                {% if nav_select == "#about" %}
-                <a href="#" class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Blog</a>
+                {% if nav_select == "blog" %}
+                <a class="bg-green-700 text-light px-3 py-1 rounded-md text-medium font-medium" aria-current="page">Blog</a>
+                {% else %}
+                <a href="#" class="text-stone-100 hover:bg-green-700 transition-all hover:text-light px-3 py-1 rounded-md text-base font-medium cursor-poiter"
+                    href="#"
+                    hx-get="/blog">Blog</a>
                 {% endif %}
-                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Blog</a>
-
-                <a href="#" class="text-stone-100 hover:bg-green-700 hover:text-light px-3 py-1 rounded-md text-base font-medium">Start Free</a>
-                {% endblock %}
+                <a href="#" class="bg-stone-100 text-igtie-500 hover:bg-stone-50 transition-all hover:text-igtie-600 px-3 py-1 rounded-md text-base font-medium">Start Free</a>
+                {%- endblock %}
               </div>
 
             </div>
@@ -270,7 +275,7 @@
         <div class="md:grid md:grid-cols-2 md:grid-rows-2">
 
           <div class="flex items-start font-kano my-6 mr-10">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-20 fill-green-600 flex-none"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
             <div>
               <h3 class="text-2xl font-muller tracking-wide uppercase">Group by type</h3>
               <p>
@@ -317,30 +322,38 @@
 
 
           <div class="flex items-start font-kano my-6 mr-10">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-20 fill-green-600 flex-none"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
             <div>
-              <h3 class="text-2xl font-muller tracking-wide uppercase">Details</h3>
+              <h3 class="text-2xl font-muller tracking-wide uppercase">Customize Details</h3>
               <p>
-                <span class="uppercase text-green-700">Someday</span> groups lists by type. This will help you choose what to reach for when
-                the proverbial rainy day comes. These are a few of the categories with examples of what kinds of items they might contain.
-              </p>
-              <p class="mt-4">
                 Depending on the category, <span class="uppercase text-green-700">Someday</span> will try to provide a few details about the item
-                you may wish to add.
+                you may wish to add. But you can always edit certain fields afterward.
               </p>
+              <p class="mt-4">For example (not final design):</p>
+              {% block example_edit %}
+              <div class="flex-col border border-igtie-700 mx-8 my-4 px-6 py-6 bg-green-100 rounded h-auto" hx-target="this" hx-swap="outerHTML">
+                <div class="px-2 py-1 bg-green-200 rounded-md"><label class="text-green-800">Band Name</label>: Remember Your Dead</div>
+                <div class="px-2 py-1"><label class="text-green-800">Song Name</label>: Innuendo Eyes</div>
+                <div class="px-2 py-1"><label class="text-green-800">Album</label>: Vigilia EP</div>
+                <div class="px-2 py-1"><label class="text-green-800">Released</label>: 2012</div>
+                <div class="px-2 py-1"><label class="text-green-800">Genre</label>: Indie Rock</div>
+                <div class="px-2 py-1"><label class="text-green-800">Notes:</label> A friend of a friend told me about this.</div>
+                <button class="mt-4 px-8 py-1 bg-igtie-500 text-light text-lg uppercase rounded-lg" hx-get="/edit">Edit</button>
+              </div>
+              {% endblock %}
               <!-- <p class="mt-4">
                 For example, let's say there's a new album by <em class="italic">Awesome Generic Band</em> that you want to store in your
                 listening category. <span class="uppercase text-green-700">Someday</span> will gather basic information about <em class="italic">
                 Generic Album Name - Greatest Hits</em> and populate it for you.
-              </p> -->
-              <!-- <p class="mt-4">
+              </p>
+              <p class="mt-4">
                 You can then edit certain fields to better describe your saved item. You may, for instance, change the album genre from <em class="italic">
                 Easy Listening</em> to something like <em class="italic">ASMR</em>.
               </p> -->
           </div>
           </div>
           <div class="flex items-start font-kano my-6 mr-10">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-20 fill-green-600 flex-none"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
             <div>
               <h3 class="text-2xl font-muller tracking-wide uppercase">Add Notes</h3>
               <p>
@@ -350,7 +363,7 @@
           </div>
          </div>
          <div class="flex items-start font-kano my-6 mr-10">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-40 fill-green-600"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve" class="w-20 fill-green-600 flex-none"><path d="M113.032 108.198c-1 0-2-.3-2.9-.9l-10-7.3-10 7.3c-1.7 1.2-4.1 1.2-5.8 0-1.7-1.2-2.4-3.4-1.8-5.5l3.9-11.8-10-7.2c-1.7-1.2-2.4-3.4-1.8-5.5.7-2 2.5-3.4 4.7-3.4h12.4l3.8-11.8c.7-2 2.5-3.4 4.7-3.4 2.1 0 4 1.4 4.7 3.4l3.7 11.9h12.4c2.1 0 4 1.4 4.7 3.4.7 2-.1 4.2-1.8 5.5l-10 7.3 3.9 11.8c.7 2 0 4.2-1.8 5.5-.9.4-1.9.7-3 .7zm-12.8-12.7c.4 0 .8.1 1.2.4l11.2 8.2c.4.3.7.3 1.1 0 .3-.2.5-.6.3-1l-4.4-13.2c-.3-.8 0-1.7.7-2.2l11.2-8.1c.3-.2.4-.6.3-1-.1-.4-.5-.6-.9-.6h-13.8c-.9 0-1.6-.6-1.9-1.4l-4.2-13.2c-.2-.8-1.5-.8-1.7 0l-4.2 13.2c-.3.8-1 1.4-1.9 1.4h-13.8c-.4 0-.7.2-.9.6-.1.4 0 .8.3 1l11.2 8.1c.7.5 1 1.4.7 2.2l-4.3 13.1c-.1.4 0 .8.3 1 .5.4.8.2 1.1 0l11.2-8.2c.3-.1.7-.3 1.2-.3z"/><path class="fill-igtie-400" d="M119.632 156.598c-.4 0-.9-.1-1.2-.4l-17.9-13.9-17.9 13.9c-.6.5-1.4.5-2.1.2-.7-.3-1.1-1-1.1-1.8v-29.9c-14.1-7.7-22.8-22.2-22.8-38.3 0-24.1 19.6-43.7 43.7-43.7s43.7 19.6 43.7 43.7c0 15.9-8.5 30.4-22.4 38.1v30.1c0 .8-.4 1.5-1.1 1.8-.3.1-.6.2-.9.2zm-19.1-18.8c.4 0 .9.1 1.2.4l15.9 12.3v-27.5c.1-.6.5-1.2 1-1.5a39.39 39.39 0 0 0 21.4-35.1c0-21.9-17.8-39.7-39.7-39.7-21.9 0-39.7 17.8-39.7 39.7 0 15 8.3 28.5 21.6 35.4.7.3 1.1 1 1.1 1.8v27l15.9-12.3c.4-.4.8-.5 1.3-.5z"/></svg>
             <div>
               <h3 class="text-2xl font-muller tracking-wide uppercase">Jackpot</h3>
               <p>
@@ -525,7 +538,7 @@
         <img src="{{ url_for('static', path='images/logos/Twitter.svg')}}" alt="Twitter logo" class="mx-4" />
       </a>
     </div>
-    <div class="text-stone-400 font-montserrat text-sm">
+    <div class="text-igtie-200 font-montserrat text-sm">
       © 2022 SOMEDAY app >> All rights reserved
     </div>
   </section>

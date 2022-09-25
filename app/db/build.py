@@ -3,7 +3,7 @@ from inspect import isclass
 
 from app import config
 from app.extensions import loaders
-from app.models.base import Model
+from app.models.db_base import Model
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import AnyUrl, BaseSettings, validator
 

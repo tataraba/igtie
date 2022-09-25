@@ -13,7 +13,12 @@ ROOT = settings.APP_DIR
 @lru_cache
 def init_template() -> Jinja2Blocks:
     """Initializes Jinja2 templates."""
-    templates = Jinja2Blocks(ROOT / app_settings.templates_dir)  # type:ignore
+    templates = Jinja2Blocks(
+        ROOT / app_settings.templates_dir,
+        autoescape=True,
+        trim_blocks=True,
+        lstrip_blocks=True,
+        )  # type:ignore
     return templates
 
 

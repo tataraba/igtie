@@ -1,0 +1,24 @@
+<form hx-put="/edit" hx-target="this" hx-swap="outerHTML">
+    <div class="flex-col border border-igtie-700 mx-8 my-4 px-6 py-6 bg-green-100 rounded h-auto">
+        <div class="px-2 py-1 bg-green-200 rounded-md"><label class="text-green-800">Band Name</label>
+            <input class="px-2 text-stone-500 rounded-md" type="text" name="band_name" value="Remember Your Dead">
+        </div>
+        <div class="px-2 py-1"><label class="text-green-800">Song Name</label>
+            <input class="px-2 text-stone-500 rounded-md" type="text" name="song_name" value="Innuendo Eyes">
+        </div>
+        <div class="px-2 py-1"><label class="text-green-800">Album</label>
+            <input class="px-2 text-stone-500 rounded-md" type="text" name="album" value="Vigilia EP">
+        </div>
+        <div class="px-2 py-1"><label class="text-green-800">Released</label>
+            <input class="px-2 text-stone-500 rounded-md" type="text" name="Released" value="2022">
+        </div>
+        <div class="px-2 py-1"><label class="text-green-800">Genre</label>
+            <input class="px-2 text-stone-500 rounded-md" type="text" name="genre" value="Post Rock">
+        </div>
+        <div class="px-2 py-1"><label class="text-green-800">Notes:</label>
+            <input class="px-2 text-stone-500 rounded-md" type="text" name="notes" value="Add your notes.">
+        </div>
+        <button class="mt-4 px-8 py-1 bg-igtie-500 text-light text-lg uppercase rounded-lg">Submit</button>
+        <button class="mt-4 px-8 py-1 bg-igtie-500 text-light text-lg uppercase rounded-lg" hx-get="/edit">Cancel</button>
+      </div>
+</form>
